@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A9B95D1B224005C500679B84 /* selecao.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D1A224005C500679B84 /* selecao.c */; };
-		A9DA8ABB223FEB1100FC2D10 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A9DA8ABA223FEB1100FC2D10 /* main.c */; };
+		A9B95D2422400C2E00679B84 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D2322400C2E00679B84 /* main.c */; };
 		A9DA8AC3223FEB5600FC2D10 /* bolha.c in Sources */ = {isa = PBXBuildFile; fileRef = A9DA8AC2223FEB5600FC2D10 /* bolha.c */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +27,8 @@
 /* Begin PBXFileReference section */
 		A9B95D19224005C500679B84 /* selecao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = selecao.h; sourceTree = "<group>"; };
 		A9B95D1A224005C500679B84 /* selecao.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = selecao.c; sourceTree = "<group>"; };
+		A9B95D2322400C2E00679B84 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		A9DA8AB7223FEB1100FC2D10 /* Ordenacao */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Ordenacao; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9DA8ABA223FEB1100FC2D10 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		A9DA8AC1223FEB5600FC2D10 /* bolha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bolha.h; sourceTree = "<group>"; };
 		A9DA8AC2223FEB5600FC2D10 /* bolha.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bolha.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,7 +44,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A9B95D1E22400A4000679B84 /* Quadraticas */ = {
+		A9B95D1E22400A4000679B84 /* Ordenacao_Quadratica */ = {
 			isa = PBXGroup;
 			children = (
 				A9B95D19224005C500679B84 /* selecao.h */,
@@ -52,7 +52,14 @@
 				A9DA8AC1223FEB5600FC2D10 /* bolha.h */,
 				A9DA8AC2223FEB5600FC2D10 /* bolha.c */,
 			);
-			path = Quadraticas;
+			path = Ordenacao_Quadratica;
+			sourceTree = "<group>";
+		};
+		A9B95D2522400C7E00679B84 /* Entrada_Saida */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entrada_Saida;
 			sourceTree = "<group>";
 		};
 		A9DA8AAE223FEB1100FC2D10 = {
@@ -74,8 +81,9 @@
 		A9DA8AB9223FEB1100FC2D10 /* Ordenacao */ = {
 			isa = PBXGroup;
 			children = (
-				A9DA8ABA223FEB1100FC2D10 /* main.c */,
-				A9B95D1E22400A4000679B84 /* Quadraticas */,
+				A9B95D2522400C7E00679B84 /* Entrada_Saida */,
+				A9B95D1E22400A4000679B84 /* Ordenacao_Quadratica */,
+				A9B95D2322400C2E00679B84 /* main.c */,
 			);
 			path = Ordenacao;
 			sourceTree = "<group>";
@@ -138,7 +146,7 @@
 			files = (
 				A9DA8AC3223FEB5600FC2D10 /* bolha.c in Sources */,
 				A9B95D1B224005C500679B84 /* selecao.c in Sources */,
-				A9DA8ABB223FEB1100FC2D10 /* main.c in Sources */,
+				A9B95D2422400C2E00679B84 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

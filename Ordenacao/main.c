@@ -15,15 +15,15 @@ void mostra(int vet[], int w);
 
 int main(int argc, const char * argv[]) {
     
-
+    
     
     int vet[10] = {5,4,3,2,6,7,3,8,6,1};
     mostra(vet, 10);
     bubbleSort(vet, 10);
-     printf("Ordenado: \n"); mostra(vet, 10);
+    printf("Ordenado: \n"); mostra(vet, 10);
     
     
-
+    
     return 0;
     
 }
@@ -36,5 +36,3 @@ void mostra(int vet[], int w){
     printf("\n");
     
 }
-
-
