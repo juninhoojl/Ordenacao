@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A9B95D1B224005C500679B84 /* selecao.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D1A224005C500679B84 /* selecao.c */; };
 		A9B95D2422400C2E00679B84 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D2322400C2E00679B84 /* main.c */; };
+		A9B95D2822400D2400679B84 /* es.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D2722400D2400679B84 /* es.c */; };
 		A9DA8AC3223FEB5600FC2D10 /* bolha.c in Sources */ = {isa = PBXBuildFile; fileRef = A9DA8AC2223FEB5600FC2D10 /* bolha.c */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,8 @@
 		A9B95D19224005C500679B84 /* selecao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = selecao.h; sourceTree = "<group>"; };
 		A9B95D1A224005C500679B84 /* selecao.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = selecao.c; sourceTree = "<group>"; };
 		A9B95D2322400C2E00679B84 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		A9B95D2622400D2400679B84 /* es.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = es.h; sourceTree = "<group>"; };
+		A9B95D2722400D2400679B84 /* es.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = es.c; sourceTree = "<group>"; };
 		A9DA8AB7223FEB1100FC2D10 /* Ordenacao */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Ordenacao; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DA8AC1223FEB5600FC2D10 /* bolha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bolha.h; sourceTree = "<group>"; };
 		A9DA8AC2223FEB5600FC2D10 /* bolha.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bolha.c; sourceTree = "<group>"; };
@@ -58,6 +61,8 @@
 		A9B95D2522400C7E00679B84 /* Entrada_Saida */ = {
 			isa = PBXGroup;
 			children = (
+				A9B95D2622400D2400679B84 /* es.h */,
+				A9B95D2722400D2400679B84 /* es.c */,
 			);
 			path = Entrada_Saida;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9DA8AC3223FEB5600FC2D10 /* bolha.c in Sources */,
+				A9B95D2822400D2400679B84 /* es.c in Sources */,
 				A9B95D1B224005C500679B84 /* selecao.c in Sources */,
 				A9B95D2422400C2E00679B84 /* main.c in Sources */,
 			);

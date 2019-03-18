@@ -15,7 +15,7 @@ void bubbleSort (int vet[], int tam){
     inicio = clock();
     double tempo;
     
-    int i, n, aux=0;
+    int i, n, aux = 0;
     
     for(i=0;i<tam;i++){
         for(n=i;n<tam;n++){
