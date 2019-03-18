@@ -15,9 +15,7 @@ void mostra(int vet[], int w);
 
 int main(int argc, const char * argv[]) {
     
-    clock_t begin, end;
-    double tempo;
-    begin = clock();
+
     
     int vet[10] = {5,4,3,2,6,7,3,8,6,1};
     mostra(vet, 10);
@@ -25,10 +23,7 @@ int main(int argc, const char * argv[]) {
      printf("Ordenado: \n"); mostra(vet, 10);
     
     
-    end = clock();
-    tempo = (double)(end - begin) / CLOCKS_PER_SEC;
-    
-    printf("Tempo: %lfs\n",tempo);
+
     return 0;
     
 }

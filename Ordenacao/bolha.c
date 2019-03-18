@@ -6,11 +6,14 @@
 //  Copyright © 2019 José Luiz Junior. All rights reserved.
 //
 
-#include <stdio.h>
-#include <stdlib.h>
+
 #include "bolha.h"
 
 void bubbleSort (int vet[], int tam){
+    
+    clock_t inicio = 0, fim = 0;
+    inicio = clock();
+    double tempo;
     
     int i, n, aux=0;
     
@@ -31,5 +34,10 @@ void bubbleSort (int vet[], int tam){
         
     }
     
+    fim = clock();
+    tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+    
+    
+    printf("Tempo: %lfs\n",tempo);
     
 }
