@@ -44,6 +44,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9B95D1E22400A4000679B84 /* Quadraticas */ = {
+			isa = PBXGroup;
+			children = (
+				A9B95D19224005C500679B84 /* selecao.h */,
+				A9B95D1A224005C500679B84 /* selecao.c */,
+				A9DA8AC1223FEB5600FC2D10 /* bolha.h */,
+				A9DA8AC2223FEB5600FC2D10 /* bolha.c */,
+			);
+			path = Quadraticas;
+			sourceTree = "<group>";
+		};
 		A9DA8AAE223FEB1100FC2D10 = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				A9DA8ABA223FEB1100FC2D10 /* main.c */,
-				A9B95D19224005C500679B84 /* selecao.h */,
-				A9B95D1A224005C500679B84 /* selecao.c */,
-				A9DA8AC1223FEB5600FC2D10 /* bolha.h */,
-				A9DA8AC2223FEB5600FC2D10 /* bolha.c */,
+				A9B95D1E22400A4000679B84 /* Quadraticas */,
 			);
 			path = Ordenacao;
 			sourceTree = "<group>";
