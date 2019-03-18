@@ -35,5 +35,14 @@ void escreveArquivo(int vet[], FILE *arqSaida, int tam){
     int i = 0;
     for (i = 0; i<tam; i++)
         fprintf(arqSaida, "%d\n", vet[i]);
+    return;
+}
+
+
+void imprimeVetor(int vet[], int tam){
     
+    int i = 0;
+    for (i = 0; i<tam; i++)
+        printf("%d ", vet[i]);
+    return;
 }

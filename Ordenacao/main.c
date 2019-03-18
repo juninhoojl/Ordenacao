@@ -12,27 +12,60 @@
 #include "bolha.h"
 #include "es.h"
 
-void mostra(int vet[], int w);
-
-static void extracted(int *vet) {
-    bubbleSort(vet, 10);
-}
-
 int main(int argc, const char * argv[]) {
     
-    int vet[10] = {5,4,3,2,6,7,3,8,6,1};
-    mostra(vet, 10);
-    extracted(vet);
-    printf("Ordenado: \n"); mostra(vet, 10);
+    //Qual é o arquivo de entrada, qual o tamanha e qual codigo usar para ordenar
+    
+    int *vet;//Ponteiro para o vetor
+    int tam = 0, metodoOrdenacao = 0, aux = 0;
+    char nomeArq[30];
+    FILE *arq;
+    
+    //O fopen retorna o endereco da primeira posicao onde o aquivo esta na memoria
+    printf("Digite o nome do arquivo de entrada: ");
+    scanf("%s", &nomeArq);
+    
+    arq = fopen(nomeArq, "r");
+    if (!arq){//se o arq nao é nulo
+        printf("Erro ao abrir o arquivo\n");
+    }
+    
+    printf("Digite a quantidade de elementos do arquivo: ");
+    scanf("%d", &tam);
+    //O vetor sempre é alocado sequencialmente
+    vet = (int*)malloc(tam*sizeof(int));
+    
+    //Ler arquivo
+    aux = lerArquivo(vet, arq, tam);
 
+    if (aux == 1) {
+        printf("\nTamanho do arquivo e icompativel com a entrada");
+        printf("\nO programa sera encerrado\nar");
+        return 1;
+    }
+    
+    //menu
+    printf("\nAlgoritmos de ordenacao:\n");
+    printf("\t1 - Bolha\n");
+    printf("\t2 - Bolha Inteligente\n");
+    printf("\t3 - Selecao\n");
+    printf("Digite a opcao desejada: ");
+    scanf("%d",&metodoOrdenacao);
+    
+    switch (metodoOrdenacao) {
+        case 1:
+            //Inicia tempo
+            //Ordena
+            bubbleSort(vet, tam);
+
+            //Fim tempo
+            break;
+            
+        default:
+            break;
+    }
+                //Escreve no arquivo
+    
     return 0;
 }
 
-void mostra(int vet[], int w){
-    
-    int i = 0;
-    for(i=0;i<w;i++)
-        printf(" %d",vet[i]);
-    printf("\n");
-    
-}

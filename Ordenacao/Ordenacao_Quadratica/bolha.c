@@ -6,7 +6,6 @@
 //  Copyright © 2019 José Luiz Junior. All rights reserved.
 //
 
-
 #include "bolha.h"
 
 void bubbleSort (int vet[], int tam){
@@ -36,8 +35,7 @@ void bubbleSort (int vet[], int tam){
     
     fim = clock();
     tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
-    
-    
     printf("Tempo: %lfs\n",tempo);
     
+    return;
 }
