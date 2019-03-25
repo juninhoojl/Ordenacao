@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "selecao.h"
+#include "bolhainteligente.h"
 #include "bolha.h"
 #include "es.h"
 
@@ -18,18 +19,16 @@ int main(int argc, const char * argv[]) {
     
     int *vet;//Ponteiro para o vetor
     int tam = 0, metodoOrdenacao = 0, aux = 0;
-    char nomeArq[30], nomeArqSaida[30];
+    char nomeArq[30];
     FILE *arq;
     
     //O fopen retorna o endereco da primeira posicao onde o aquivo esta na memoria
     printf("Digite o nome do arquivo de entrada: ");
-    //scanf("%[^\n]s",nomeArq);
     scanf("%s",nomeArq);
 
 
     arq = fopen(nomeArq, "r");
     if (!arq){//se o arq nao é nulo
-        
         printf("Erro ao abrir o arquivo\n");
         exit(1);
     }
@@ -46,9 +45,13 @@ int main(int argc, const char * argv[]) {
     fclose(arq);
 
     if (aux == 1) {
-        printf("\nTamanho do arquivo e icompativel com a entrada");
+        printf("\nTamanho do arquivo é maior que o especificado!");
         printf("\nO programa sera encerrado\nar");
-        return 1;
+        exit(1);
+    }else if (aux == 2){
+        printf("\nTamanho do arquivo é menor que o especificado!");
+        printf("\nO programa sera encerrado\nar");
+        exit(1);
     }
     
     //Menu
@@ -62,26 +65,27 @@ int main(int argc, const char * argv[]) {
     
     switch (metodoOrdenacao) {
         case 1:
-            //Ordena
             bubbleSort(vet, tam);
-            
+            break;
+        case 2:
+            bubbleSortInteligente(vet, tam);
             break;
         case 3:
-            //Ordena
             selectSort(vet, tam);
-            
             break;
         default:
-            //
             break;
     }
     
-    
     printf("Digite o nome do arquivo de saida: ");
-    //scanf("%[^\n]s",nomeArq);
     scanf("%s",nomeArq);
     
     arq = fopen(nomeArq, "w");
+    
+    if (!arq){//se o arq nao é nulo
+        printf("Erro ao escrever no arquivo\n");
+        exit(1);
+    }
     
     escreveArquivo(vet, arq, tam);
     //fechar aquivo

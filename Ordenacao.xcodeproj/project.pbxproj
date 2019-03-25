@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A954EB1A2248896E003A7089 /* bolhainteligente.c in Sources */ = {isa = PBXBuildFile; fileRef = A954EB192248896E003A7089 /* bolhainteligente.c */; };
 		A9B95D1B224005C500679B84 /* selecao.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D1A224005C500679B84 /* selecao.c */; };
 		A9B95D2422400C2E00679B84 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D2322400C2E00679B84 /* main.c */; };
 		A9B95D2822400D2400679B84 /* es.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D2722400D2400679B84 /* es.c */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A954EB182248896E003A7089 /* bolhainteligente.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bolhainteligente.h; sourceTree = "<group>"; };
+		A954EB192248896E003A7089 /* bolhainteligente.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bolhainteligente.c; sourceTree = "<group>"; };
 		A9B95D19224005C500679B84 /* selecao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = selecao.h; sourceTree = "<group>"; };
 		A9B95D1A224005C500679B84 /* selecao.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = selecao.c; sourceTree = "<group>"; };
 		A9B95D2322400C2E00679B84 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -51,6 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				A9B95D19224005C500679B84 /* selecao.h */,
+				A954EB182248896E003A7089 /* bolhainteligente.h */,
+				A954EB192248896E003A7089 /* bolhainteligente.c */,
 				A9B95D1A224005C500679B84 /* selecao.c */,
 				A9DA8AC1223FEB5600FC2D10 /* bolha.h */,
 				A9DA8AC2223FEB5600FC2D10 /* bolha.c */,
@@ -152,6 +157,7 @@
 				A9DA8AC3223FEB5600FC2D10 /* bolha.c in Sources */,
 				A9B95D2822400D2400679B84 /* es.c in Sources */,
 				A9B95D1B224005C500679B84 /* selecao.c in Sources */,
+				A954EB1A2248896E003A7089 /* bolhainteligente.c in Sources */,
 				A9B95D2422400C2E00679B84 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
