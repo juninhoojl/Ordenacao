@@ -9,6 +9,12 @@
 #ifndef selecao_h
 #define selecao_h
 
+#include "es.h"
+#include <time.h>
 #include <stdio.h>
+#include <stdlib.h>
+
+void selectSort(int vet[], int tam);
+
 
 #endif /* selecao_h */

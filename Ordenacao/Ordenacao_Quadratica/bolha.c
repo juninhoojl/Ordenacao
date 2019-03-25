@@ -8,34 +8,24 @@
 
 #include "bolha.h"
 
-void bubbleSort (int vet[], int tam){
+void bubbleSort(int vet[], int tam){
     
-    clock_t inicio = 0, fim = 0;
-    inicio = clock();
-    double tempo;
-    
+    clock_t inicio = clock();
     int i, n, aux = 0;
     
     for(i=0;i<tam;i++){
-        for(n=i;n<tam;n++){
-            
-            //[1,2,3,4,5]
-            
-            if(vet[i]>vet[n]){
+        for(n=0;n<tam-1;n++){
+            if(vet[n]>vet[n+1]){
                 //Troca
-                aux = vet[i];
-                vet[i] = vet[n];
-                vet[n] = aux;
+                aux = vet[n];
+                vet[n] = vet[n+1];
+                vet[n+1] = aux;
+
             }
-            
-            
         }
-        
     }
-    
-    fim = clock();
-    tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
-    printf("Tempo: %lfs\n",tempo);
+
+    printf("Tempo: %fms\n",1000*(double)(clock() - inicio) / CLOCKS_PER_SEC);
     
     return;
 }

@@ -9,10 +9,11 @@
 #ifndef bolha_h
 #define bolha_h
 
+#include "es.h"
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-    void bubbleSort (int vet[], int tam);
+    void bubbleSort(int vet[], int tam);
 
 #endif /* bolha_h */

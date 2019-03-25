@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include "selecao.h"
 #include "bolha.h"
 #include "es.h"
 
@@ -18,16 +18,20 @@ int main(int argc, const char * argv[]) {
     
     int *vet;//Ponteiro para o vetor
     int tam = 0, metodoOrdenacao = 0, aux = 0;
-    char nomeArq[30];
+    char nomeArq[30], nomeArqSaida[30];
     FILE *arq;
     
     //O fopen retorna o endereco da primeira posicao onde o aquivo esta na memoria
     printf("Digite o nome do arquivo de entrada: ");
-    scanf("%s", &nomeArq);
-    
+    //scanf("%[^\n]s",nomeArq);
+    scanf("%s",nomeArq);
+
+
     arq = fopen(nomeArq, "r");
     if (!arq){//se o arq nao é nulo
+        
         printf("Erro ao abrir o arquivo\n");
+        exit(1);
     }
     
     printf("Digite a quantidade de elementos do arquivo: ");
@@ -37,6 +41,9 @@ int main(int argc, const char * argv[]) {
     
     //Ler arquivo
     aux = lerArquivo(vet, arq, tam);
+    
+    //Depois de ler fecha
+    fclose(arq);
 
     if (aux == 1) {
         printf("\nTamanho do arquivo e icompativel com a entrada");
@@ -44,7 +51,8 @@ int main(int argc, const char * argv[]) {
         return 1;
     }
     
-    //menu
+    //Menu
+    //Criar menu loop
     printf("\nAlgoritmos de ordenacao:\n");
     printf("\t1 - Bolha\n");
     printf("\t2 - Bolha Inteligente\n");
@@ -54,17 +62,32 @@ int main(int argc, const char * argv[]) {
     
     switch (metodoOrdenacao) {
         case 1:
-            //Inicia tempo
             //Ordena
             bubbleSort(vet, tam);
-
-            //Fim tempo
-            break;
             
+            break;
+        case 3:
+            //Ordena
+            selectSort(vet, tam);
+            
+            break;
         default:
+            //
             break;
     }
-                //Escreve no arquivo
+    
+    
+    printf("Digite o nome do arquivo de saida: ");
+    //scanf("%[^\n]s",nomeArq);
+    scanf("%s",nomeArq);
+    
+    arq = fopen(nomeArq, "w");
+    
+    escreveArquivo(vet, arq, tam);
+    //fechar aquivo
+    
+    fclose(arq);
+    
     
     return 0;
 }
