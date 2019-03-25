@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include "selecao.h"
 #include "bolhainteligente.h"
+#include "insercao.h"
 #include "bolha.h"
 #include "es.h"
 
@@ -18,9 +19,61 @@ int main(int argc, const char * argv[]) {
     //Qual é o arquivo de entrada, qual o tamanha e qual codigo usar para ordenar
     
     int *vet;//Ponteiro para o vetor
-    int tam = 0, metodoOrdenacao = 0, aux = 0;
+    int tam = 0, metodoOrdenacao = 0, aux = 0, op = 0;
     char nomeArq[30];
     FILE *arq;
+
+    
+    printf("Deseja gerar um arquivo aleatorio? sim[1] nao[0]\n");
+    scanf("%d", &op);
+    if (op) {
+        
+        printf("Digite o nome que deseja: ");
+        scanf("%s",nomeArq);
+
+        printf("Digite a quantidade de elementos que deseja: ");
+        scanf("%d", &tam);
+        
+        // deseja usar o arquivo gerado?
+        arq = fopen(nomeArq, "w");
+        if (!arq){//se o arq nao é nulo
+            printf("Erro ao criar arquivo\n");
+            exit(1);
+        }
+        
+        //Escreve aqui
+        
+        gerarAleatorio(arq, tam);
+        
+        //Depois de escrever fecha
+        fclose(arq);
+        //Se escreveu, pergunta se quer usar
+        
+        arq = fopen(nomeArq, "r");
+        if (!arq){//se o arq nao é nulo
+            printf("Erro ao abrir o arquivo\n");
+            exit(1);
+        }
+        
+        vet = (int*)malloc(tam*sizeof(int));
+        
+        //Ler arquivo
+        aux = lerArquivo(vet, arq, tam);
+        
+        //Depois de ler fecha
+        fclose(arq);
+        
+        if (aux == 1) {
+            printf("\nTamanho do arquivo é maior que o especificado!");
+            printf("\nO programa sera encerrado\nar");
+            exit(1);
+        }else if (aux == 2){
+            printf("\nTamanho do arquivo é menor que o especificado!");
+            printf("\nO programa sera encerrado\nar");
+            exit(1);
+        }
+        
+    }else{
     
     //O fopen retorna o endereco da primeira posicao onde o aquivo esta na memoria
     printf("Digite o nome do arquivo de entrada: ");
@@ -53,7 +106,7 @@ int main(int argc, const char * argv[]) {
         printf("\nO programa sera encerrado\nar");
         exit(1);
     }
-    
+    }
     //Menu
     //Criar menu loop
     printf("\nAlgoritmos de ordenacao:\n");
@@ -77,20 +130,22 @@ int main(int argc, const char * argv[]) {
             break;
     }
     
-    printf("Digite o nome do arquivo de saida: ");
-    scanf("%s",nomeArq);
-    
-    arq = fopen(nomeArq, "w");
-    
-    if (!arq){//se o arq nao é nulo
-        printf("Erro ao escrever no arquivo\n");
-        exit(1);
+    //Opcao arquivo de saida
+    printf("Deseja salvar em um arquivo de saida? sim[1] nao[0]\n");
+    scanf("%d", &op);
+    if (op) {
+        printf("\nDigite o nome do arquivo de saida: ");
+        scanf("%s",nomeArq);
+        arq = fopen(nomeArq, "w");
+        if (!arq){//se o arq nao é nulo
+            printf("Erro ao escrever no arquivo\n");
+            exit(1);
+        }
+        escreveArquivo(vet, arq, tam);
+        //fechar aquivo
+        fclose(arq);
     }
-    
-    escreveArquivo(vet, arq, tam);
-    //fechar aquivo
-    
-    fclose(arq);
+
     
     
     return 0;

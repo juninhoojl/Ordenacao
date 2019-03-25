@@ -49,6 +49,12 @@ void imprimeVetor(int vet[], int tam){
 void gerarAleatorio(FILE *arqSaida, int qtd){
     srand((int)time(NULL));
     int i = 0;
-    for (i = 0; i < qtd; i++)
-        fprintf(arqSaida, "%d\n", rand());
+    for (i = 0; i < qtd; i++){
+        if (i+1 == qtd){
+            fprintf(arqSaida, "%d", rand());
+        
+        }else{
+            fprintf(arqSaida, "%d\n", rand());
+        }
+    }
 }

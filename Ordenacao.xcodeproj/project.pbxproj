@@ -12,6 +12,7 @@
 		A9B95D2422400C2E00679B84 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D2322400C2E00679B84 /* main.c */; };
 		A9B95D2822400D2400679B84 /* es.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D2722400D2400679B84 /* es.c */; };
 		A9DA8AC3223FEB5600FC2D10 /* bolha.c in Sources */ = {isa = PBXBuildFile; fileRef = A9DA8AC2223FEB5600FC2D10 /* bolha.c */; };
+		A9EF7A1422498A9400D8609F /* insercao.c in Sources */ = {isa = PBXBuildFile; fileRef = A9EF7A1322498A9400D8609F /* insercao.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		A9DA8AB7223FEB1100FC2D10 /* Ordenacao */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Ordenacao; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DA8AC1223FEB5600FC2D10 /* bolha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bolha.h; sourceTree = "<group>"; };
 		A9DA8AC2223FEB5600FC2D10 /* bolha.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bolha.c; sourceTree = "<group>"; };
+		A9EF7A1222498A9400D8609F /* insercao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = insercao.h; sourceTree = "<group>"; };
+		A9EF7A1322498A9400D8609F /* insercao.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = insercao.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,8 @@
 				A9B95D1A224005C500679B84 /* selecao.c */,
 				A9DA8AC1223FEB5600FC2D10 /* bolha.h */,
 				A9DA8AC2223FEB5600FC2D10 /* bolha.c */,
+				A9EF7A1222498A9400D8609F /* insercao.h */,
+				A9EF7A1322498A9400D8609F /* insercao.c */,
 			);
 			path = Ordenacao_Quadratica;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9DA8AC3223FEB5600FC2D10 /* bolha.c in Sources */,
+				A9EF7A1422498A9400D8609F /* insercao.c in Sources */,
 				A9B95D2822400D2400679B84 /* es.c in Sources */,
 				A9B95D1B224005C500679B84 /* selecao.c in Sources */,
 				A954EB1A2248896E003A7089 /* bolhainteligente.c in Sources */,
