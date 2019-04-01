@@ -10,11 +10,10 @@
 #define insercao_h
 
 #include "es.h"
-#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-
+void insertion(int V[], int tam);
 
 
 #endif /* insercao_h */

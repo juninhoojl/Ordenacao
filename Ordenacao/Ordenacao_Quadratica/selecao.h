@@ -10,7 +10,6 @@
 #define selecao_h
 
 #include "es.h"
-#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
 

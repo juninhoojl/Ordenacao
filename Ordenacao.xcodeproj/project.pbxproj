@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A907EF2222527B4100A35D70 /* merge.c in Sources */ = {isa = PBXBuildFile; fileRef = A907EF2122527B4100A35D70 /* merge.c */; };
 		A954EB1A2248896E003A7089 /* bolhainteligente.c in Sources */ = {isa = PBXBuildFile; fileRef = A954EB192248896E003A7089 /* bolhainteligente.c */; };
 		A9B95D1B224005C500679B84 /* selecao.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D1A224005C500679B84 /* selecao.c */; };
 		A9B95D2422400C2E00679B84 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D2322400C2E00679B84 /* main.c */; };
@@ -28,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A907EF2022527B4100A35D70 /* merge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = merge.h; sourceTree = "<group>"; };
+		A907EF2122527B4100A35D70 /* merge.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = merge.c; sourceTree = "<group>"; };
 		A954EB182248896E003A7089 /* bolhainteligente.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bolhainteligente.h; sourceTree = "<group>"; };
 		A954EB192248896E003A7089 /* bolhainteligente.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bolhainteligente.c; sourceTree = "<group>"; };
 		A9B95D19224005C500679B84 /* selecao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = selecao.h; sourceTree = "<group>"; };
@@ -53,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A907EF242252817F00A35D70 /* Ordenacao_Logaritmica */ = {
+			isa = PBXGroup;
+			children = (
+				A907EF2022527B4100A35D70 /* merge.h */,
+				A907EF2122527B4100A35D70 /* merge.c */,
+			);
+			path = Ordenacao_Logaritmica;
+			sourceTree = "<group>";
+		};
 		A9B95D1E22400A4000679B84 /* Ordenacao_Quadratica */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +108,7 @@
 		A9DA8AB9223FEB1100FC2D10 /* Ordenacao */ = {
 			isa = PBXGroup;
 			children = (
+				A907EF242252817F00A35D70 /* Ordenacao_Logaritmica */,
 				A9B95D2522400C7E00679B84 /* Entrada_Saida */,
 				A9B95D1E22400A4000679B84 /* Ordenacao_Quadratica */,
 				A9B95D2322400C2E00679B84 /* main.c */,
@@ -143,6 +156,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = A9DA8AAE223FEB1100FC2D10;
 			productRefGroup = A9DA8AB8223FEB1100FC2D10 /* Products */;
@@ -161,6 +175,7 @@
 			files = (
 				A9DA8AC3223FEB5600FC2D10 /* bolha.c in Sources */,
 				A9EF7A1422498A9400D8609F /* insercao.c in Sources */,
+				A907EF2222527B4100A35D70 /* merge.c in Sources */,
 				A9B95D2822400D2400679B84 /* es.c in Sources */,
 				A9B95D1B224005C500679B84 /* selecao.c in Sources */,
 				A954EB1A2248896E003A7089 /* bolhainteligente.c in Sources */,

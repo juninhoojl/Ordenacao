@@ -10,7 +10,6 @@
 
 
 void selectSort(int vet[], int tam){
-    clock_t inicio = clock();
 
     int i = 0,n = 0,aux = 0;
 
@@ -29,8 +28,6 @@ void selectSort(int vet[], int tam){
         
         
     }
-
-    printf("Tempo: %fms\n",1000*(double)(clock() - inicio) / CLOCKS_PER_SEC);
 
     return;
 }

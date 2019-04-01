@@ -13,20 +13,22 @@
 #include "insercao.h"
 #include "bolha.h"
 #include "es.h"
+#include "merge.h"
 
 int main(int argc, const char * argv[]) {
     
     //Qual é o arquivo de entrada, qual o tamanha e qual codigo usar para ordenar
     
     int *vet;//Ponteiro para o vetor
-    int tam = 0, metodoOrdenacao = 0, aux = 0, op = 0;
+    int tam = 0, metodoOrdenacao = 0, aux = 0;
     char nomeArq[30];
+    char op;
     FILE *arq;
+    clock_t inicio;
 
-    
-    printf("Deseja gerar um arquivo aleatorio? sim[1] nao[0]\n");
-    scanf("%d", &op);
-    if (op) {
+    printf("Deseja gerar um arquivo aleatorio? sim[s] nao[n]\n");
+    scanf("%c", &op);
+    if (op == 's') {
         
         printf("Digite o nome que deseja: ");
         scanf("%s",nomeArq);
@@ -113,9 +115,13 @@ int main(int argc, const char * argv[]) {
     printf("\t1 - Bolha\n");
     printf("\t2 - Bolha Inteligente\n");
     printf("\t3 - Selecao\n");
+    printf("\t4 - Insercao\n");
+    printf("\t5 - Merge\n");
     printf("Digite a opcao desejada: ");
     scanf("%d",&metodoOrdenacao);
     
+    //Inicio clock
+    inicio = clock();
     switch (metodoOrdenacao) {
         case 1:
             bubbleSort(vet, tam);
@@ -126,14 +132,22 @@ int main(int argc, const char * argv[]) {
         case 3:
             selectSort(vet, tam);
             break;
+        case 4:
+            insertion(vet, tam);
+            break;
+        case 5:
+            mergeSort(vet, 0, (tam-1));
+            break;
         default:
             break;
     }
+    //Fim Clock
+    printf("Tempo: %fms\n",1000*(double)(clock() - inicio) / CLOCKS_PER_SEC);
     
     //Opcao arquivo de saida
-    printf("Deseja salvar em um arquivo de saida? sim[1] nao[0]\n");
-    scanf("%d", &op);
-    if (op) {
+    printf("Deseja salvar em um arquivo de saida? sim[s] nao[n]\n");
+    scanf("%c", &op);
+    if (op == 's') {
         printf("\nDigite o nome do arquivo de saida: ");
         scanf("%s",nomeArq);
         arq = fopen(nomeArq, "w");
@@ -146,8 +160,6 @@ int main(int argc, const char * argv[]) {
         fclose(arq);
     }
 
-    
-    
     return 0;
 }
 
