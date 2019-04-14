@@ -7,6 +7,7 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "selecao.h"
 #include "bolhainteligente.h"
 #include "insercao.h"
@@ -178,6 +179,16 @@ int main(int argc, const char * argv[]) {
     //Fim Clock
     printf("Tempo: %fms\n",1000*(double)(clock() - inicio) / CLOCKS_PER_SEC);
     
+    printf("Deseja printar o vetor ordenado? sim[s] nao[n]\n");
+    op = '\0';
+    while (op != 's' && op != 'S' && op != 'n' && op != 'N' ) {
+        if (op != '\0')
+            printf("Opcao invalida, digite novamente: ");
+        scanf("%s", &op);
+    }
+    if(op == 's' || op == 'S')
+        imprimeVetor(vet, tam);
+    
     //Opcao arquivo de saida
     printf("Deseja salvar em um arquivo de saida? sim[s] nao[n]\n");
     op = '\0';
@@ -187,7 +198,7 @@ int main(int argc, const char * argv[]) {
         scanf("%s", &op);
     }
     
-    if (op == 's') {
+    if (op == 's' || op == 'S') {
         printf("\nDigite o nome do arquivo de saida: ");
         scanf("%s",nomeArq);
         arq = fopen(nomeArq, "w");
