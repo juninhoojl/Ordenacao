@@ -46,15 +46,36 @@ void imprimeVetor(int vet[], int tam){
     return;
 }
 
-void gerarAleatorio(FILE *arqSaida, int qtd){
+void gerarAleatorio(FILE *arqSaida, int qtd, int op){
     srand((int)time(NULL));
+    
     int i = 0;
-    for (i = 0; i < qtd; i++){
-        if (i+1 == qtd){
-            fprintf(arqSaida, "%d", rand());
+    if(op == 1){ // Aleatorio
+        for (i = 0; i < qtd; i++){
+            if (i+1 == qtd){
+                fprintf(arqSaida, "%d", rand());
+            }else{
+                fprintf(arqSaida, "%d\n", rand());
+            }
+        }
         
-        }else{
-            fprintf(arqSaida, "%d\n", rand());
+    }else if (op == 2){ //Crescente, ja ordenado
+        for (i = 0; i < qtd; i++){
+            if (i+1 == qtd){
+                fprintf(arqSaida, "%d", i);
+            }else{
+                fprintf(arqSaida, "%d\n", i);
+            }
+        }
+    }else{ //Decrescente, invertido
+        for (i = qtd-1; i >= 0; i--){
+            if (i > 0){
+                fprintf(arqSaida, "%d\n", i);
+            }else{
+                fprintf(arqSaida, "%d", i);
+            }
         }
     }
+    
+    return;
 }

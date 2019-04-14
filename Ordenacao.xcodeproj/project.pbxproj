@@ -12,6 +12,8 @@
 		A9B95D1B224005C500679B84 /* selecao.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D1A224005C500679B84 /* selecao.c */; };
 		A9B95D2422400C2E00679B84 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D2322400C2E00679B84 /* main.c */; };
 		A9B95D2822400D2400679B84 /* es.c in Sources */ = {isa = PBXBuildFile; fileRef = A9B95D2722400D2400679B84 /* es.c */; };
+		A9CC55C22263A172006C0ABD /* quick.c in Sources */ = {isa = PBXBuildFile; fileRef = A9CC55C12263A172006C0ABD /* quick.c */; };
+		A9CC55C52263A39C006C0ABD /* mergeinloco.c in Sources */ = {isa = PBXBuildFile; fileRef = A9CC55C42263A39C006C0ABD /* mergeinloco.c */; };
 		A9DA8AC3223FEB5600FC2D10 /* bolha.c in Sources */ = {isa = PBXBuildFile; fileRef = A9DA8AC2223FEB5600FC2D10 /* bolha.c */; };
 		A9EF7A1422498A9400D8609F /* insercao.c in Sources */ = {isa = PBXBuildFile; fileRef = A9EF7A1322498A9400D8609F /* insercao.c */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,10 @@
 		A9B95D2322400C2E00679B84 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		A9B95D2622400D2400679B84 /* es.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = es.h; sourceTree = "<group>"; };
 		A9B95D2722400D2400679B84 /* es.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = es.c; sourceTree = "<group>"; };
+		A9CC55C02263A171006C0ABD /* quick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = quick.h; sourceTree = "<group>"; };
+		A9CC55C12263A172006C0ABD /* quick.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = quick.c; sourceTree = "<group>"; };
+		A9CC55C32263A39C006C0ABD /* mergeinloco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mergeinloco.h; sourceTree = "<group>"; };
+		A9CC55C42263A39C006C0ABD /* mergeinloco.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mergeinloco.c; sourceTree = "<group>"; };
 		A9DA8AB7223FEB1100FC2D10 /* Ordenacao */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Ordenacao; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DA8AC1223FEB5600FC2D10 /* bolha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bolha.h; sourceTree = "<group>"; };
 		A9DA8AC2223FEB5600FC2D10 /* bolha.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bolha.c; sourceTree = "<group>"; };
@@ -61,6 +67,10 @@
 			children = (
 				A907EF2022527B4100A35D70 /* merge.h */,
 				A907EF2122527B4100A35D70 /* merge.c */,
+				A9CC55C02263A171006C0ABD /* quick.h */,
+				A9CC55C12263A172006C0ABD /* quick.c */,
+				A9CC55C32263A39C006C0ABD /* mergeinloco.h */,
+				A9CC55C42263A39C006C0ABD /* mergeinloco.c */,
 			);
 			path = Ordenacao_Logaritmica;
 			sourceTree = "<group>";
@@ -178,7 +188,9 @@
 				A907EF2222527B4100A35D70 /* merge.c in Sources */,
 				A9B95D2822400D2400679B84 /* es.c in Sources */,
 				A9B95D1B224005C500679B84 /* selecao.c in Sources */,
+				A9CC55C22263A172006C0ABD /* quick.c in Sources */,
 				A954EB1A2248896E003A7089 /* bolhainteligente.c in Sources */,
+				A9CC55C52263A39C006C0ABD /* mergeinloco.c in Sources */,
 				A9B95D2422400C2E00679B84 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

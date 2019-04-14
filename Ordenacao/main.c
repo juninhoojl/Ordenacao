@@ -5,7 +5,6 @@
 //  Created by José Luiz Junior on 18/03/19.
 //  Copyright © 2019 José Luiz Junior. All rights reserved.
 //
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "selecao.h"
@@ -14,6 +13,8 @@
 #include "bolha.h"
 #include "es.h"
 #include "merge.h"
+#include "mergeinloco.h"
+#include "quick.h"
 
 int main(int argc, const char * argv[]) {
     
@@ -22,17 +23,21 @@ int main(int argc, const char * argv[]) {
     int *vet;//Ponteiro para o vetor
     int tam = 0, metodoOrdenacao = 0, aux = 0;
     char nomeArq[30];
-    char op;
+    char op = '\0';
     FILE *arq;
     clock_t inicio;
-
-    printf("Deseja gerar um arquivo aleatorio? sim[s] nao[n]\n");
-    scanf("%c", &op);
-    if (op == 's') {
+    
+    printf("Deseja gerar um arquivo? sim[s] nao[n]\n");
+    while (op != 's' && op != 'S' && op != 'n' && op != 'N' ) {
+        if (op != '\0')
+            printf("Opcao invalida, digite novamente: ");
+        scanf("%s", &op);
+    }
+    if (op == 's' || op == 'S') {
         
         printf("Digite o nome que deseja: ");
         scanf("%s",nomeArq);
-
+        
         printf("Digite a quantidade de elementos que deseja: ");
         scanf("%d", &tam);
         
@@ -44,8 +49,23 @@ int main(int argc, const char * argv[]) {
         }
         
         //Escreve aqui
+        //Capturar opcao
+        printf("\nTipo de arquivo:\n");
+        printf("\t1 - Aleatorio\n");
+        printf("\t2 - Ordenado\n");
+        printf("\t3 - Invertido\n");
+        printf("Digite a opcao desejada: ");
+        while (metodoOrdenacao != 1 && metodoOrdenacao != 2 && metodoOrdenacao != 3) {
+            if (metodoOrdenacao){
+                printf("Opcao invalida, digite novamente: ");
+            }
+            
+            scanf("%d",&metodoOrdenacao);
+        }
         
-        gerarAleatorio(arq, tam);
+        //Escolhe o tipo de aquivo
+        gerarAleatorio(arq, tam, metodoOrdenacao);
+        metodoOrdenacao = 0;
         
         //Depois de escrever fecha
         fclose(arq);
@@ -117,8 +137,16 @@ int main(int argc, const char * argv[]) {
     printf("\t3 - Selecao\n");
     printf("\t4 - Insercao\n");
     printf("\t5 - Merge\n");
+    printf("\t6 - Merge in Loco\n");
+    printf("\t7 - Quick\n");
     printf("Digite a opcao desejada: ");
-    scanf("%d",&metodoOrdenacao);
+    while ((metodoOrdenacao != 1) && (metodoOrdenacao != 2) && (metodoOrdenacao != 3) && (metodoOrdenacao != 4) && (metodoOrdenacao != 5) && (metodoOrdenacao != 6) && (metodoOrdenacao != 7)) {
+        if (metodoOrdenacao){
+            printf("Opcao invalida, digite novamente: ");
+        }
+        
+        scanf("%d",&metodoOrdenacao);
+    }
     
     //Inicio clock
     inicio = clock();
@@ -138,6 +166,12 @@ int main(int argc, const char * argv[]) {
         case 5:
             mergeSort(vet, 0, (tam-1));
             break;
+        case 6:
+            mergein(vet,0,tam-1);
+            break;
+        case 7:
+            quickSort(vet, 0, (tam-1));
+            break;
         default:
             break;
     }
@@ -146,7 +180,13 @@ int main(int argc, const char * argv[]) {
     
     //Opcao arquivo de saida
     printf("Deseja salvar em um arquivo de saida? sim[s] nao[n]\n");
-    scanf("%c", &op);
+    op = '\0';
+    while (op != 's' && op != 'S' && op != 'n' && op != 'N' ) {
+        if (op != '\0')
+            printf("Opcao invalida, digite novamente: ");
+        scanf("%s", &op);
+    }
+    
     if (op == 's') {
         printf("\nDigite o nome do arquivo de saida: ");
         scanf("%s",nomeArq);
@@ -162,4 +202,3 @@ int main(int argc, const char * argv[]) {
 
     return 0;
 }
-

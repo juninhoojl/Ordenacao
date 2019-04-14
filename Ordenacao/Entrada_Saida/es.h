@@ -22,6 +22,6 @@ void escreveArquivo(int vet[], FILE *arqSaida, int tam);
 
 void imprimeVetor(int vet[], int tam);
 
-void gerarAleatorio(FILE *arqSaida, int qtd);
+void gerarAleatorio(FILE *arqSaida, int qtd, int op);
 
 #endif /* es_h */
