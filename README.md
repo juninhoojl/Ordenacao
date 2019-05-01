@@ -12,5 +12,6 @@
 
 ## Base Program
 
-* Generate 3 types of files to sort.
-* Count time
+* Generates 3 types of numeric files.
+
+* Count time using clock cycles
