@@ -9,29 +9,29 @@
 #include "mergeinloco.h"
 
 void in_place(int vetor[],int inicio,int meio,int fim){
-    int aux,pos_esq=inicio, pos_dir = meio;
-    if(pos_esq<pos_dir){
-        //ordenaÁ„o inplace
-        while(pos_dir<=fim){
-            if(vetor[pos_esq]<=vetor[pos_dir]){
-                pos_esq++;
+    int aux,pos_esq=inicio, pos_dir = meio+1,pos_aux;
+    //ordenaÁ„o inplace
+    while((pos_esq<=meio)&&(pos_dir<=fim)){
+        if(vetor[pos_esq]<=vetor[pos_dir]){
+            pos_esq++;
+        }
+        else{
+            pos_aux = pos_dir;
+            aux=vetor[pos_dir];
+            while(pos_aux>pos_esq){
+                vetor[pos_aux]=vetor[pos_aux-1];
+                pos_aux--;
             }
-            else{
-                aux=vetor[pos_esq];
-                vetor[pos_esq]=vetor[pos_dir];
-                vetor[pos_dir]=aux;
-                pos_esq++;
-            }
-            if (pos_esq == pos_dir){
-                pos_dir++;
-                pos_esq=inicio;
-            }
+            vetor[pos_esq]=aux;
+            pos_esq++;
+            meio++;
+            pos_dir++;
+            
         }
     }
     return;
     
 }
-
 void mergein(int vetor[],int inicio, int fim){
     int meio;
     meio=(inicio+fim)/2;
@@ -41,6 +41,6 @@ void mergein(int vetor[],int inicio, int fim){
         //direita
         mergein(vetor,meio+1,fim);
     }
-    in_place(vetor,inicio,meio+1,fim);
+    in_place(vetor,inicio,meio,fim);
     return;
 }
