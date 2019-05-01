@@ -9,3 +9,8 @@
     6 - Merge in Loco
     7 - Quick
 ```
+
+## Base Program
+
+* Generate 3 types of files to sort.
+* Count time
