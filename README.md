@@ -16,4 +16,4 @@
 
 * Generates 3 types of numeric files.
 
-* Count time using clock cycles
+* Count time using clock cycles.
